@@ -16,7 +16,6 @@ def num_pipeline():
 
 def fetch_pipeline():
     housing = pd.read_csv("datasets/housing/housing.csv")
-    housing_labels = housing["median_house_value"].copy()
     housing = housing.drop("median_house_value", axis=1)
     housing_num = housing.drop("ocean_proximity", axis=1)
 
